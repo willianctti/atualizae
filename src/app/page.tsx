@@ -12,7 +12,7 @@ interface Noticia {
 }
 
 const fetchNoticias = async (page: number, limit: number = 10) => {
-  const res = await fetch(`http://servicodados.ibge.gov.br/api/v3/noticias/?page=${page}&limit=${limit}`);
+  const res = await fetch(`https://servicodados.ibge.gov.br/api/v3/noticias/?page=${page}&limit=${limit}`);
   if (!res.ok) {
     throw new Error('Falha ao buscar notícias');
   }
